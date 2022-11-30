@@ -8,12 +8,11 @@ const Header = () => {
 	return (
 		<header className='flex justify-between items-center p-2 h-16 w-full border-b-2 border-slate-300 bg-slate-200'>
 			<Link
-				className='bg-amber-500 p-2 rounded-3xl text-xl font-semibold tracking-widest shadow-sm hover:shadow-lg text-white hover:text-blue-500 cursor-pointer'
+				className='bg-gradient-to-r from-amber-500 to-pink-400 p-2 rounded-3xl text-md font-semibold tracking-widest shadow-sm hover:shadow-lg text-white hover:text-blue-500 cursor-pointer'
 				to='/'
 			>
-				Travel Diaries
+				Contact Manager
 			</Link>
-			<h1>{store.user ? store.user : ''}</h1>
 			<ul className='flex mr-2'>
 				{store.user ? (
 					<li>

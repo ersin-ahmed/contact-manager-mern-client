@@ -1,6 +1,7 @@
 import authStore from '../store/authStore';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import Dashboard from '../components/Dashboard';
 
 const Home = () => {
 	const store = authStore();
@@ -14,9 +15,9 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div>
-			<h1>Home</h1>
-		</div>
+		<>
+			<Dashboard />
+		</>
 	);
 };
 
