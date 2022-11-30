@@ -63,7 +63,6 @@ const authStore = create((set) => ({
 					password2: '',
 				},
 			});
-			console.log(response.data);
 			if (response.data) {
 				localStorage.setItem('user', JSON.stringify(response.data));
 				localStorage.setItem(
@@ -104,7 +103,6 @@ const authStore = create((set) => ({
 					password: '',
 				},
 			});
-			console.log(response.data);
 			if (response.data) {
 				localStorage.setItem('user', JSON.stringify(response.data));
 				localStorage.setItem(

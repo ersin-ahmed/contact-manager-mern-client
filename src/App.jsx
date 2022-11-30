@@ -4,6 +4,9 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Header from './components/Header';
+import Delete from './pages/Delete';
+import Edit from './pages/Edit';
+import Create from './pages/Create';
 
 function App() {
 	return (
@@ -16,6 +19,9 @@ function App() {
 						<Route path='/login' element={<Login />} />
 						<Route path='/register' element={<Register />} />
 						<Route path='/profile' element={<Profile />} />
+						<Route path='/create' element={<Create />} />
+						<Route path='/update' element={<Edit />} />
+						<Route path='/delete' element={<Delete />} />
 					</Routes>
 				</div>
 			</Router>
