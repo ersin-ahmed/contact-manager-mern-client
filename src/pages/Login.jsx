@@ -26,6 +26,12 @@ const Login = () => {
 					onSubmit={onSubmit}
 					className='bg-white shadow-md rounded-md px-8 pt-6 pb-8 mb-4'
 				>
+					<p className='font-bold p-4 text-blue-600'>
+						Demo Account with Fake User Data <br /> Email:{' '}
+						<span className='underline'>test@email.com</span>
+						<br />
+						Password: <span className='underline'>test</span>
+					</p>
 					<div className='mb-4'>
 						<label
 							className='block text-gray-700 text-sm font-bold mb-2'
