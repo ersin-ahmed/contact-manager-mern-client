@@ -74,6 +74,11 @@ const Login = () => {
 							value='Log In'
 						/>
 					</div>
+					{store.message && (
+						<p className='text-center pt-4 font-semibold text-red-500 animate-pulse'>
+							Invalid Credentials!
+						</p>
+					)}
 				</form>
 			</section>
 		</>

@@ -9,8 +9,13 @@ const Register = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		await store.register();
-		navigate('/');
+		if (store.userData.email) {
+			await store.register();
+			navigate('/login');
+		} else if (!store.userData.email) {
+			await store.register();
+			navigate('/register');
+		}
 	};
 
 	return (
@@ -77,23 +82,6 @@ const Register = () => {
 							onChange={store.setUserData}
 						/>
 					</div>
-					<div className='mb-4'>
-						<label
-							className='block text-gray-700 text-sm font-bold mb-2'
-							htmlFor='password2'
-						>
-							Confirm Password
-						</label>
-						<input
-							className='shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-							type='password'
-							id='password2'
-							name='password2'
-							value={store.userData.password2}
-							placeholder='Confirm Password'
-							onChange={store.setUserData}
-						/>
-					</div>
 
 					<div className='pt-4 flex justify-center'>
 						<input
@@ -102,8 +90,12 @@ const Register = () => {
 							value='Register'
 						/>
 					</div>
+					{store.message && (
+						<p className='text-center pt-4 font-semibold text-red-500 animate-pulse'>
+							Please Fill Out All Fields Accordingly!
+						</p>
+					)}
 				</form>
-				{store.message ? store.message : ''}
 			</section>
 		</>
 	);
