@@ -18,7 +18,7 @@ const Header = () => {
 	return (
 		<header className='sticky top-0 z-50 flex justify-between items-center p-2 h-16 w-full border-b-2 border-slate-300 bg-slate-200'>
 			<Link
-				className='bg-gradient-to-r from-amber-500 to-pink-400 p-2 rounded-3xl text-md font-semibold tracking-widest shadow-sm hover:shadow-lg text-white hover:text-gray-600 cursor-pointer'
+				className='bg-gradient-to-r from-amber-500 to-pink-400 p-2 rounded-3xl text-md font-semibold tracking-widest shadow-sm hover:shadow-lg text-white cursor-pointer'
 				to='/'
 				onClick={nav && handleClick}
 			>

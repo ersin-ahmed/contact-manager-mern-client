@@ -83,10 +83,10 @@ const Dashboard = () => {
 			</div>
 			<div className='mt-2 w-full lg:w-[90vw]'>
 				<Link
-					to='/json'
+					to='/csv'
 					className='font-medium text-blue-500 hover:underline p-2'
 				>
-					Export Contacts as JSON
+					Export Contacts as CSV
 				</Link>
 			</div>
 			{/* Mobile Friendly Table */}

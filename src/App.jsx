@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Delete from './pages/Delete';
 import Edit from './pages/Edit';
 import Create from './pages/Create';
+import Csv from './pages/Csv';
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 						<Route path='/create' element={<Create />} />
 						<Route path='/update' element={<Edit />} />
 						<Route path='/delete' element={<Delete />} />
+						<Route path='/csv' element={<Csv />} />
 					</Routes>
 				</div>
 			</Router>
