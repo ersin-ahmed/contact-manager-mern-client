@@ -1,4 +1,5 @@
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaSpinner } from 'react-icons/fa';
+import { CgSpinner } from 'react-icons/cg';
 import authStore from '../store/authStore';
 import { useNavigate } from 'react-router-dom';
 
@@ -72,8 +73,14 @@ const Login = () => {
 							className='cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:shadow-outline" type="button'
 							type='submit'
 							value='Log In'
+							onClick={store.loading}
 						/>
 					</div>
+					{store.isLoading && (
+						<div className='flex justify-center pt-4'>
+							<CgSpinner size={30} className='animate-spin' />
+						</div>
+					)}
 					{store.message && (
 						<p className='text-center pt-4 font-semibold text-red-500 animate-pulse'>
 							Invalid Credentials!

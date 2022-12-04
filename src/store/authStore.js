@@ -135,6 +135,7 @@ const authStore = create((set) => ({
 				email: '',
 				password: '',
 			},
+			isLoading: false,
 		});
 		localStorage.removeItem('user');
 		localStorage.removeItem('username');
@@ -149,6 +150,12 @@ const authStore = create((set) => ({
 			isSuccess: false,
 			isLoading: false,
 			message: '',
+		});
+	},
+
+	loading: () => {
+		set({
+			isLoading: true,
 		});
 	},
 }));
